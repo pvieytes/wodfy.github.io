@@ -10,21 +10,159 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-   
 
-    <div  id='startup' class="jumbotron jumbo-two">
-      <div class="container text-center">
-        <h1><img src="img/icons/w-bulb.png" /> WODFY</h1>
-        <h2>Workout Of the Day For You</h2>
-        <h3>COMING SOON!!!</h3>              
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="auto" /></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <!--<form class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>-->
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+   <div class="jumbotron jumbo-pullups">
+      <div class="container text-center">   
+        <div class="jumbo-pullups-container">
+          <p><img src="img/logo.png" /></p> 
+          <h2 class="green-wodfy">WOD For You</h2>
+          <h3>Elije la rutina que más se adecue a tus necesidades y cada día tendrás un entrenamiento que te ayudará a alcanzar tus objetivos</h3>
+          <h3>Registra todos tus ejercicios en nuestra aplicación.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="panel panel-default col-md-3 col-md-offset-4">
+          <div class="panel-body">
+          <p>Beta en pruebas. Obtén tu invitación.</p>
+            <form id="create" class="form-horizontal" role="form" method="post">
+               
+               <input class="form-control" id="id_email" name="email" placeholder="email" type="email"> 
+               <br />
+              <button type="submit" class="btn btn-primary" disabled="true">Mantenme informado</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero descriptions">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 text-center">            
+            <h2>Consigue tus objetivos</h2>
+            <h2 class=""><span class="glyphicon glyphicon-road" aria-hidden="true"></span></h2>
+            <p class="">Entrenamientos creados por los mejores expertos con la información más detallada de cada ejercicio.</p>
+          </div>
+          <div class="col-md-3 text-center">            
+            <h2>Donde quiereas</h2>
+            <h2 class=""><span class="glyphicon glyphicon-home" aria-hidden="true"></span></h2>
+            <p class="">En casa, en el parque, en el gimnasio...</p>
+          </div>
+          <div class="col-md-3 text-center">            
+            <h2>Adaptados a ti</h2>
+            <h2 class=""><span class="glyphicon glyphicon-user" aria-hidden="true"></span></h2>
+            <p class="">Varía la intensidad de los ejercicios según tus necesidades.</p>
+          </div>  
+          <div class="col-md-3 text-center">            
+            <h2>Registra tus entrenamientos</h2>
+            <h2 class=""><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></h2>
+            <p class="">Almacena tus tiempos o repeticiones, crea nuevos retos y compara entrenamientos anteriores para controlar tu progreso</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="hero routines">
+      <div class="container  text-center">
+
+        <div class="row">
+          <h1>ENTRENAMIENTOS</h1>
+          <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Entrenamiento con Kettlebell
+              </div>
+              <div class="panel-body">
+                <p><a href="#"><img src="img/kettlebell.jpg" alt="kettlebell" class="img-rounded  img-small"></a></p>
+                <p><a href="#" class="btn btn-primary" role="button">Mas información</a>
+              </div>
+            </div>
+          </div>          
+        <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Entrenamiento con calistenia
+              </div>
+              <div class="panel-body">
+                <p><a href="#"><img src="img/calistenia.jpg" alt="kettlebell" class="img-rounded  img-small"></a></p>
+                <p><a href="#" class="btn btn-primary" role="button">Mas información</a>
+              </div>
+            </div>
+          </div>  
+          <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Entrenamiento Fuerza
+              </div>
+              <div class="panel-body">
+                <p><a href="#"><img src="img/fuerza.jpg" alt="kettlebell" class="img-rounded  img-small"></a></p>
+                <p><a href="#" class="btn btn-primary" role="button">Mas información</a>
+              </div>
+            </div>
+          </div> 
+          <div class="col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                Entrenamiento quemar grasas
+              </div>
+              <div class="panel-body">
+                <p><a href="#"><img src="img/grasa.jpg" alt="kettlebell" class="img-rounded  img-small"></a></p>
+                <p><a href="#" class="btn btn-primary" role="button">Mas información</a>
+              </div>
+            </div>
+          </div>  
+        </div>
       </div>
     </div>
 
     
 
+    <div class="hero my-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h2>Contacto</h2>
+            <p>Creado por Onytes</p>
+            <p><a href="mailto:info@onytes.com">info@onytes.com</a></p>            
+          </div>          
+        </div>
+      </div>
+    </div>
 
 
-    <script src="js/jquery-1.10.1.min.js"></script>   
+
+
+  
+
+    <script src="js/jquery-1.11.1.min.js"></script>   
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <!--google analytics-->

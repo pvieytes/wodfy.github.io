@@ -4,9 +4,64 @@
 .white-text{
     color: #FFF;
 }
+.descriptions{
+	background-color: #FFF;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+.img-small{
+	
+	width: 100px;
+	height: auto;
+}
+.routines{
+	background-color: #EEE;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+.my-footer{
+	color: #eee;
+	background-color: #222;
+}
+.pad{
+	padding: 50px;
+}
+
+/*html,body {height:100%;}*/
+
+.launch-form{
+	background-color: #000;
+	width: 400px;
+}
 
 
-html,body {height:100%;}
+
+.jumbo-pullups{
+	background: url("../img/pull-ups.jpg") no-repeat center center fixed;
+	background-size: cover;
+	position: relative;
+	margin: 0px;
+	padding-top: 100px;
+}
+
+.jumbo-pullups-container{
+	color: #CCC;
+	background-color: rgba(0,0,0,0.4);
+	margin: 20px;
+	padding: 20px;
+	border-radius: 10px;
+
+}
+.jumbo-pullups-footer{
+	color: #AAA;
+	background-color: #000; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+}
+
 
 .jumbo-one{
 	background-color: #3498db;

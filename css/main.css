@@ -9,10 +9,15 @@
 	padding-top: 50px;
 	padding-bottom: 100px;
 }
+.logo-nav{
+	max-height: 90%;
+}
 .img-small{
 	
 	width: 100px;
 	height: auto;
+}
+.suscribe-panel{
 }
 .routines{
 	background-color: #EEE;

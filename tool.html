@@ -57,16 +57,6 @@
     <script src="js/libs/require-2.1.21.min.js"></script>
 
 <script>
-/*console.log('html');
-requirejs(['js/require-conf.js'], function (config) {
-  //config requirejs with dynamic baseUrl
-    config.start('.');
-    requirejs(['ony-ear'], function (OnyEar){
-      OnyEar.init();
-      //console.log();
-  });//end config-areas
-});//end config-requirejs*/
-
 
 
 window.onload = function () {
@@ -77,15 +67,16 @@ window.onload = function () {
           console.log(state, progress);
         },
         onsuccess: function() {
-          var delay = 0; // play one note every quarter second
-          var note = 50; // the MIDI note
-          var velocity = 127; // how hard the note hits
-          // play the note
-          MIDI.setVolume(0, 127);
-          MIDI.noteOn(0, note, velocity, delay);
-          MIDI.noteOff(0, note, delay +0.75);
 
 
+        requirejs(['js/require-conf.js'], function (config) {
+          //config requirejs with dynamic baseUrl
+            config.start('.');
+            requirejs(['ony-ear'], function (OnyEar){
+              OnyEar.init();
+              //console.log();
+          });//end config-areas
+        });//end config-requirejs
         }
       });
     };

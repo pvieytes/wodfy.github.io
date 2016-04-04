@@ -6,8 +6,55 @@ define( ["jquery"], function ($) {
 		lowest,
 		highest,
 		activatedButtonClass = 'btn-success',
-		disactivatedButtonClass = 'btn-default';
+		disactivatedButtonClass = 'btn-default',
+		intervals={},
+		selectedIntervals,
+		intervalDelay=1000;
 
+	function initIntervals(){
+		intervals['3m'] = [0, 3];
+		intervals['3M'] = [0, 4];
+
+
+
+		$interval = $('.js-interval-select');
+		for (i in intervals){
+			$interval.append('<option>' + i + '</option>');
+		}
+		$('.js-interval-select').change(selectedIntervals);
+		$('.js-play-random-interval').click(playRandomInterval);
+
+	}
+	function selectedIntervals(){
+		selectedIntervals = [];
+
+		$('.js-interval-select').find(":selected").each(function(){
+			selectedIntervals.push($(this).html());
+		});
+	}
+
+	function playRandomInterval(){
+
+		var interval = selectedIntervals[Math.floor(Math.random()*selectedIntervals.length)];
+		$('.js-interval-notes').html(interval + ' ');
+		startNote = Math.floor((Math.random() * highest) + lowest);
+		intervalNotes = intervals[interval];
+		for (i=0; i<intervalNotes.length; i++){
+			playTimeout(startNote + intervalNotes[i], i);
+			showTimeout(startNote + intervalNotes[i], i);
+		}
+
+	}
+
+	function playTimeout(n, i) {
+  		setTimeout(function() { play(n); }, intervalDelay*i);
+	}
+	
+	function showTimeout(n, i) {
+  		setTimeout(function() { 
+  			$('.js-interval-notes').append(MIDI.noteToKey[n] + ' ');
+  		}, intervalDelay*i);
+	}
 
 
     function init(){
@@ -18,6 +65,7 @@ define( ["jquery"], function ($) {
         initInstrument();
         intiInstrumentRange();
         initPlayButton();
+        initIntervals();
         
     }
 
